@@ -1179,13 +1179,13 @@ static AVFrame* _php_read_av_frame(ff_movie_context *ffmovie_ctx,
             if (got_frame) {
                 *is_keyframe = (packet.flags & AV_PKT_FLAG_KEY);
                 *pts = packet.pts;
-                av_free_packet(&packet);
+                av_packet_unref(&packet);
                 return frame;
             }
         }
 
         /* free the packet allocated by av_read_frame */
-        av_free_packet(&packet);
+        av_packet_unref(&packet);
     }
 
     av_free(frame);
