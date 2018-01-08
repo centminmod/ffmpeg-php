@@ -212,7 +212,7 @@ int _php_convert_frame(ff_frame_context *ff_frame, int dst_fmt) {
     }
 
     dst_frame = avcodec_alloc_frame();
-    avpicture_alloc((AVPicture*)dst_frame, dst_fmt, ff_frame->width,
+    av_image_alloc((AVPicture*)dst_frame, dst_fmt, ff_frame->width,
             ff_frame->height);
 
     result = img_convert( (AVPicture *)dst_frame, dst_fmt,
@@ -512,7 +512,7 @@ int _php_resample_frame(ff_frame_context *ff_frame,
     }
 
     resampled_frame = avcodec_alloc_frame();
-    avpicture_alloc((AVPicture*)resampled_frame, AV_PIX_FMT_YUV420P,
+    av_image_alloc((AVPicture*)resampled_frame, AV_PIX_FMT_YUV420P,
             wanted_width, wanted_height);
 
     img_resample(img_resample_ctx, (AVPicture*)resampled_frame,
