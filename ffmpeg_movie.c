@@ -1292,7 +1292,7 @@ static int _php_get_ff_frame(ff_movie_context *ffmovie_ctx, int wanted_frame, IN
         ff_frame->pts = pts;
 
         ff_frame->av_frame = avcodec_alloc_frame();
-        avpicture_alloc((AVPicture*)ff_frame->av_frame, ff_frame->pixel_format,
+        av_image_alloc((AVPicture*)ff_frame->av_frame, ff_frame->pixel_format,
             ff_frame->width, ff_frame->height);
 
         /* FIXME: temporary hack until I figure out how to pass new buffers
