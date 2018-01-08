@@ -1298,7 +1298,7 @@ static int _php_get_ff_frame(ff_movie_context *ffmovie_ctx, int wanted_frame, IN
         /* FIXME: temporary hack until I figure out how to pass new buffers
          *        to the decoder
          */
-        av_picture_copy((AVPicture*)ff_frame->av_frame,
+        av_image_copy((AVPicture*)ff_frame->av_frame,
                         (AVPicture*)frame, ff_frame->pixel_format,
                 ff_frame->width, ff_frame->height);
 
