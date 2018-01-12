@@ -8,4 +8,4 @@ ffmpeg-php is an extension for PHP that adds an easy to use, object-oriented API
 Originally hosted at http://ffmpeg-php.sourceforge.net, the project seems to be abandoned right now.
 So here is a fork of it with minor modifications required to make it work with recent PHP versions.
 
-This is a working fork of the tony2001/ffmpeg-php projest that appears to be abandoned as well. The objective of this project fork at this point is fixing depracated constants against the latest build of ffmpeg.
+This is a working fork of the tony2001/ffmpeg-php project that appears to be abandoned as well. The objective of this project fork at this point is fixing depracated constants against the latest build of ffmpeg.
