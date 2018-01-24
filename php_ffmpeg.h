@@ -59,7 +59,7 @@
 #endif
 
 /*
- * fix for `undefined symbol: avcodec_alloc_frame in Unknown on line 0`
+ * NEW fix for `undefined symbol: avcodec_alloc_frame in Unknown on line 0`
  */
 #define avcodec_alloc_frame av_frame_alloc
 
